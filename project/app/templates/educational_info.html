@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Informations</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="containeer">
+    <h1 style="text-align: center; font-family: 'Courier New', Courier, monospace;">Educational Information</h1>
+</div>
+
+    <div class="container">
+
+
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">SSC Year</th>
+                <th scope="col">SSC Result</th>
+                <th scope="col">HSC Year</th>
+                <th scope="col">HSC Result</th>
+                <th scope="col">University</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Bachelor Completed Year</th>
+              </tr>
+            </thead>
+            <tbody>
+        {% for i in x %}
+        
+   
+    
+    
+    
+    
+    
+              <tr>
+                <th scope="row">{{i.user.name}}</th>
+                <td>{{i.ssc_year}}</td>
+                <td>{{i.ssc_result}}</td>
+                <td>{{i.hsc_year}}</td>
+                <td>{{i.hsc_result}}</td>
+                <td>{{i.university}}</td>
+                <td>{{i.subject}}</td>
+                <td>{{i.bachelor_completed_year}}</td>
+                
+              </tr>
+              
+          {% endfor %}
+              
+            </tbody>
+          </table>
+
+
+    </div>
+
+    
+
+
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+

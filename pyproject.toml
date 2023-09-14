@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "merrage-db"
+version = "0.1.0"
+description = ""
+authors = ["riaz-khan-16 <goriazmte@gmail.com>"]
+readme = "README.md"
+packages = [{include = "merrage_db"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
