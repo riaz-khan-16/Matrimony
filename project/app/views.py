@@ -81,7 +81,38 @@ def user_profile_with_all_info(request,id):
     else:
         return False
     
-    return render(request,"desired_info.html")
+def user_login(request):
+    if request.method=='POST':
+        username=request.POST['username']
+        password=request.POST['password']
+
+        print(username)
+        print(password)
+
+        user=User.objects.get(name=username,password=password)
+
+        if user:
+            id=user.id
+            name=user.name
+            password=user.password
+            return user_profile_with_all_info(request,id)        
+
+    return render(request,"user_login.html")
+
+def public_page(request):
+    x=Iitial_info.objects.all()
+    context = {
+      'items':x,
+      }
+
+    return render(request,"public_page.html",context)
+
+
+def user_admin(request):
+
+    return render(request,"admin_dashboard.html")
+
+
 
     
 
