@@ -1,4 +1,4 @@
-# Marriage_app_version_2
+# Marriage Partner Finding Application (Django)
 
 ## Goal:
 The goal of this project is to help general people for their marriage partner finding.
