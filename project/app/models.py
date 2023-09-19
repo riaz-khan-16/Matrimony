@@ -66,6 +66,19 @@ class  Desired_person(models.Model):
     def __str__(self):
         return self.user.name
 
+class Contact_info(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    phone_no=models.CharField(max_length=80,null=True)
+    email=models.CharField(max_length=80,null=True)
+    facebook_id=models.CharField(max_length=80,null=True)
+    def __str__(self):
+        return self.user.name
+    
+    
+
+
+
+
   
 
 

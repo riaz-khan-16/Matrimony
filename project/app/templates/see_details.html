@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See Details of ID {{id}}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  
+    <h1 style="text-align: center; font-family: 'Courier New', Courier, monospace;">ID :{{id}}</h1> 
+   
+
+</div>
+
+    <div class="container">
+
+
+        <!-- First Row Start -->
+
+        <div class="row">
+
+       
+        <div class="col-md-6">
+
+           
+            <div class="card" style="width: 100%;">
+                <div class="card-header">
+                  Basic Iinformations
+                </div>
+                <ul class="list-group list-group-flush">
+                  
+                  <li class="list-group-item"><p style="font-weight: 700;">Age: </p> {{initial_info.age}}</li>
+                  <li class="list-group-item"><p style="font-weight: 700;">Height: </p> {{initial_info.height}}</li>
+                  <li class="list-group-item"><p style="font-weight: 700;">Body Color: </p> {{initial_info.body_color}}</li>
+                  <li class="list-group-item"><p style="font-weight: 700;">Present  Address: </p> {{initial_info.present_adress}}</li>
+                  
+                  
+                </ul>
+              </div>
+
+
+        </div>
+
+        <div class="col-md-6">
+
+
+            <div class="card" style="width: 100%;">
+                <div class="card-header">
+                  Family Informations
+                </div>
+                <ul class="list-group list-group-flush">
+
+                  
+                    <li class="list-group-item"><p style="font-weight: 700;">Total Family Members: </p>{{family_info.total_members}}</li>
+                    <li class="list-group-item"><p style="font-weight: 700;">How Many Brother's You have: </p>{{family_info.number_of_bro}}</li>
+                    <li class="list-group-item"><p style="font-weight: 700;">Hpw Many Sister's You Have: </p>{{family_info.number_of_sister}}</li>
+                    <li class="list-group-item"><p style="font-weight: 700;">Profession of your Father: </p>{{family_info.father_profession}}</li>
+                    <li class="list-group-item"><p style="font-weight: 700;">Professtion Of your Mother: </p>{{family_info.mother_profession}}</li>
+                  
+                </ul>
+              </div>
+
+
+        </div>
+
+
+
+
+
+        
+
+                       
+ </div>
+
+  <!-- First Row End-->
+
+  <p></p>
+  <p></p>
+
+<!-- Second Row Start -->
+
+ <div class="row">
+
+
+
+    <div class="col-md-6">
+
+           
+        <div class="card" style="width: 100%;">
+            <div class="card-header">
+              Educational Informations
+            </div>
+
+            
+           
+
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><p style="font-weight: 700;">SSC \ Dakhil\ Equivalent Year: </p> {{educational_info.ssc_year}}</li>
+              <li class="list-group-item"><p style="font-weight: 700;">SSC \ Dakhil\ Equivalent Result: </p> {{educational_info.ssc_result}}</li>
+              <li class="list-group-item"><p style="font-weight: 700;">HSC\ALIM\Equivalent Year: </p> {{educational_info.hsc_year}}</li>
+              <li class="list-group-item"><p style="font-weight: 700;">HSC\ALIM\Equivalent Result: </p> {{educational_info.hsc_result}}</li>
+              <li class="list-group-item"><p style="font-weight: 700;">University\College\Madrasha: </p> {{educational_info.university}}</li>
+              <li class="list-group-item"><p style="font-weight: 700;">Graduation Year if Completetd: </p> {{educational_info.bachelor_completed_year}}</li>
+              
+              
+              
+            </ul>
+          </div>
+
+
+    </div>
+
+
+
+    <div class="col-md-6">
+
+
+        <div class="card" style="width: 100%;">
+            <div class="card-header">
+             Professional Informations
+            </div>
+            <ul class="list-group list-group-flush">
+
+              
+                <li class="list-group-item"><p style="font-weight: 700;">Profession: </p>{{professional_info.profession}}</li>
+                <li class="list-group-item"><p style="font-weight: 700;"> Monthly Income: </p>{{professional_info.monthly_income}}</li>
+                <li class="list-group-item"><p style="font-weight: 700;"> Work Place\company\business: </p>{{professional_info.organization}}</li>
+                
+            
+              
+            </ul>
+          </div>
+
+
+    </div>
+
+
+ </div>
+
+ <!-- Second Row End -->
+
+ <p></p>
+ <p></p>
+ <p></p>
+
+ <p></p>
+
+<!-- third row started -->
+ <div class="row">
+
+
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+
+        <div class="card" style="width: 100%;">
+            <div class="card-header">
+             Desired Person Qualities
+            </div>
+            <ul class="list-group list-group-flush">
+                
+              
+                <li class="list-group-item"><p style="font-weight: 700;">Desied Person's Profession: </p>{{desired_person.desired_person_profession}}</li>
+                <li class="list-group-item"><p style="font-weight: 700;"> Desied Person's Height: </p>{{desired_person.desired_person_height}}</li>
+                <li class="list-group-item"><p style="font-weight: 700;"> Desied Person's Age: </p>{{desired_person.desired_person_age}}</li>
+                <li class="list-group-item"><p style="font-weight: 700;"> Desied Person's Educational Qualities</p>{{desired_person.desired_person_education}}</li>
+                <li class="list-group-item"><p style="font-weight: 700;"> Desied Person's Other Qualities </p>{{desired_person.desired_person_qualities}}</li>
+
+                
+            
+              
+            </ul>
+          </div>
+
+
+    </div>
+
+
+ </div>
+
+
+<!-- third row end -->
+
+
+<p></p>
+    </div>
+
+    
+<p></p>
+
+<p></p>
+
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+

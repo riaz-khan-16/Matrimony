@@ -8,9 +8,12 @@ urlpatterns = [
     path('professional_info/', views.professional_info, name='professional_info'),
     path('educational_info/', views.educational_info, name='educational_info'),
     path('desired_person/', views.desired_person, name='desired_person'),
-    path('user_profile/<int:id>/', views.user_profile_with_all_info, name='user_profile'),
+    path('user_profile/', views.user_profile_with_all_info, name='user_profile'),
     path('user_login/', views.user_login, name='user_login'),
+    path('logout/', views.logout, name='logout'),
     path('', views.public_page, name='public'),
     path('user_admin/', views.user_admin, name='user_Admin'),
+    path('see_details/<int:id>/', views.see_details, name='see_details'),
+    path('propose/<int:id>/', views.show_contact_info, name='show_contact_info'),
  
 ]
