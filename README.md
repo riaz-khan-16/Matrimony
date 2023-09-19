@@ -8,10 +8,10 @@ People haven't enough time to explore the whole country and find the desirable p
 This is a waste of time. To overcome the problem this application comes up. Using this app anyone can:
 <br>
 
-Find his or her desired person
-Can upload his or her profile
-Can propose a person
-Can choose a persona by observing various things like height, age, face color, etc
+*Find his or her desired person <br>
+*Can upload his or her profile <br>
+*Can propose a person<br>
+*Can choose a persona by observing various things like height, age, face color, etc<br>
 <br>
 
 ## The Technology Used in This Project
