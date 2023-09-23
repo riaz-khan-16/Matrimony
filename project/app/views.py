@@ -107,8 +107,12 @@ def user_login(request):
 
 def public_page(request):
     x=Iitial_info.objects.all()
+    profession=Professional_info.objects.all()
+    educatiton=Educational_info.objects.all()
     context = {
       'items':x,
+      'profession':profession,
+      'education':educatiton,
       }
     print(request.session.get('password'))
 

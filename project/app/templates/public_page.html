@@ -72,40 +72,164 @@
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
+        
+        .menus li{
+
+            color: #fff;
+            font-size: 20px;
+            margin: 0px 20px;
+            text-decoration: none;
+            transform-style: none;
+
+            list-style-type: none;  
+            font-weight: bold;  
+            font-size: 20px;  
+        }
+
+        .menus{
+
+            margin: 20px;
+        }
       
+
+        .typing-h1 {
+  font-size: 70px;
+  font-weight: 500;
+  color: #553c9a;
+  border-right: 4px solid #000;
+  animation: cursor 1s infinite step-end, typing 5s infinite steps(20);
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes cursor{
+  0%, 100%{border-color: transparent;}
+  50%{border-color: #000;}
+}
+
+@keyframes typing{
+  0%{ width: 0ch} /*Text is hidden*/
+  30%{ width: 30ch;} /*The enitre header will be typed out*/
+  80%{ width: 30ch;} /*Text stays visible*/
+  90%{ width: 0ch;} /*Text is deleted*/
+  100%{ width: 0ch;} /*Text stays hidden*/
+}
+
+
+
+
+.typing-h1 {
+  font-size: 70px;
+  font-weight: 500;
+  color: #553c9a;
+  border-right: 4px solid #000;
+  animation: cursor 1s infinite step-end, typing 5s infinite steps(20);
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes cursor{
+  0%, 100%{border-color: transparent;}
+  50%{border-color: #000;}
+}
+
+@keyframes typing{
+  0%{ width: 0ch} /*Text is hidden*/
+  30%{ width: 30ch;} /*The enitre header will be typed out*/
+  80%{ width: 30ch;} /*Text stays visible*/
+  90%{ width: 0ch;} /*Text is deleted*/
+  100%{ width: 0ch;} /*Text stays hidden*/
+}
+.hedding2{
+  font-size: 30px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+  background-image: conic-gradient(
+    #553c9a 0%, #9bf733 33%, #ee4b2b 33%, #ee4b2b 66%, #00c2cb 66%, #00c2cb 99%
+  );;
+
+  margin-bottom: 50px;
+}
+
+
+
       
     </style>
 </head>
 <body >
+
    
     
     <div class="wrapper" style=" ">
          <div class="overlay"></div>
+
+
+         <div class="container manubar">
+
+            <div class="row">
+                
+
+               
+                <ul style="display: flex; justify-content: center;" class="menus">
+                    <li style="color: #FD8;">Home</li>
+                    <li style="color: rgb(66, 76, 214);">About Us</li>
+                    <li style="color: rgb(87, 218, 105);">Instructions</li>
+                    <li style="color: rgb(226, 80, 100);">Login Here</li>
+                    <li style="color: rgb(64, 166, 206);">Register Here</li>
+                </ul>
+
+
+
+
+
+            </div>
+         </div>
          
                
                
              <div class="content"> 
 
+                 <div class="container">
+                <div class="row">
+
+                    <h1  class="typing-h1" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #fff;">Choose your Life Partner Easily</h1>
+
+                    <h3 class="hedding2" style="">
+                        Welcome to the Marriage Partner Finder Application.
+
+                        
+                    </h3>
+                </div>
                
-                <h1  class="typing-h1">Choose your Parner</h1>
+            </div>
                 
+                
+
+
                 <div class="container">
 
                     <div class="row">
                               
                         {% for item in items %}
+                        
                         <div class="col-md-4" style="margin-bottom: 20px;">
                             <div class="card">
                                 <div class="card-body">
                                   <!-- <h5 class="card-title" >{{ item.full_name }}</h5> -->
-                                  <p>ID: {{item.id}}  </p>
+                                  <p style="text-align: center;">ID: {{item.id}}  </p>
                                   <p>Age: {{item.age}}  </p>
                                   <p>Gender: {{item.gender}}  </p>
+                                 
                                   <p>Height: {{item.height}}  </p>
                                   <p>Color: {{item.body_color}}  </p>
                                   
                                   
-                                  <div>
+                                  
+                                  
+                                  <div style="display: flex;justify-content: space-between;">
                                     <a href="propose/{{item.id}}" class="btn btn-warning">Propose</a>
                                     <a href="see_details/{{item.id}}" class="btn btn-primary">Details</a>
                                     <a href="#" class="btn btn-secondary">Like</a>
@@ -120,12 +244,15 @@
                         <div class="form-group row">
                        
                             <div class="col-sm-10" style="display: flex;justify-content: center;">
+                                <button type="submit" class="btn btn-primary" style="margin-left: 1rem; margin-right: 1rem; text-decoration: none;"> <a href="#" style="color: beige;">Register your Profle</a></button>
+                                <button type="submit" class="btn btn-primary"> <a href="#" style="color: beige;">Login</a></button>
                               
-                              <button type="submit" class="btn btn-primary"> <a href="/logout" style="color: beige;">Logout</a></button>
+                            
                             </div>
                         </div>
                         
-
+                        <p></p>
+                        <p></p>
 
                     </div>
                 </div>
