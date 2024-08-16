@@ -14,6 +14,5 @@ urlpatterns = [
     path('', views.public_page, name='public'),
     path('user_admin/', views.user_admin, name='user_Admin'),
     path('see_details/<int:id>/', views.see_details, name='see_details'),
-    path('propose/<int:id>/', views.show_contact_info, name='show_contact_info'),
- 
+    path('propose/<int:id>/', views.propose, name='show_contact_info'),
 ]

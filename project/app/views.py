@@ -1,11 +1,20 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .models import User,Iitial_info,Family_info,Professional_info,Educational_info,Desired_person,Contact_info
+from .models import User,Iitial_info,Family_info,Professional_info,Educational_info,Desired_person,Contact_info,Prposals
 # Create your views here.
 
 
 def index(request):
     x=User.objects.all()
+    # if request.method == 'GET':
+ 
+    #     # getting all the objects of hotel.
+    #     Hotels = Hotel.objects.all()
+    
+    #     template = loader.get_template('display_hotel_images.html')
+    #     context = {
+    #         'hotel_images': Hotels
+    #     }
     context = {
     'x':x
      }
@@ -154,7 +163,7 @@ def see_details(request,id):
 
 
     
-def show_contact_info(request,id):
+def propose(request,id):
 
     if id:
         user=User.objects.get(id=id)
@@ -167,8 +176,28 @@ def show_contact_info(request,id):
             'contact':cotact_info,
    
         }
+    
+    if request.method=='POST':
+        from_id=request.POST['from_id']
+        proposal_message=request.POST['proposal_message']
+        
+        print(from_id)
+        print(proposal_message)
 
-    return render(request,"show_contact_infor.html",context)    
+
+        user=Prposals(user=user, from_id=from_id,proposal_message=proposal_message)
+        user.save()
+
+        return HttpResponse('You have successfully sent a Proposal message')
+
+        
+
+        
+
+        
+
+
+    return render(request,"propose.html",context)    
 
 
 

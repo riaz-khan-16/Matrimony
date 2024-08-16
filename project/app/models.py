@@ -5,6 +5,7 @@ class User(models.Model):
     id=models.AutoField(primary_key=True)
     name=models.CharField(max_length=20)
     password=models.CharField(max_length=20,null=True)
+    img = models.ImageField(upload_to='images/',null=True)
     def __str__(self):
         return self.name
     
@@ -16,7 +17,8 @@ class Iitial_info(models.Model):
     height=models.IntegerField(null=True)
     body_color= models.CharField(max_length=20,null=True)
     present_adress=models.CharField(max_length=50,null=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)   
+    user = models.OneToOneField(User, on_delete=models.CASCADE)  
+    img = models.ImageField(upload_to='images/',null=True) 
     def __str__(self):
         return self.user.name
     
@@ -74,7 +76,23 @@ class Contact_info(models.Model):
     def __str__(self):
         return self.user.name
     
-    
+
+class Prposals(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    from_id=models.CharField(max_length=80,null=True)
+    proposal_message=models.CharField(max_length=800,null=True)
+
+    def __str__(self):
+        return self.from_id
+
+
+# models.py
+class Image(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    img = models.ImageField(upload_to='images/')
+    def __str__(self):
+        return self.name
 
 
 
